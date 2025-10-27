@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 const ContactUs = () => {
   return (
-    <section className="bg-gray-100 text-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-gray-100 text-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       {/* Top Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wide text-yellow-600">
@@ -50,7 +50,7 @@ const ContactUs = () => {
           <div className="flex items-center gap-3">
             <MapPin size={24} className="text-yellow-500" />
             <span className="text-lg sm:text-xl font-semibold">
-              Star Solution
+             The Star Solution
             </span>
           </div>
           <div className="flex items-center gap-3">

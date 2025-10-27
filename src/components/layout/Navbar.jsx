@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { X, ChevronDown, Menu, PhoneCall, HousePlus } from "lucide-react";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -80,6 +81,14 @@ const Navbar = () => {
               </div>
             )}
           </li>
+
+<HashLink smooth to="#contact">
+  <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+    Contact Us
+  </li>
+</HashLink>
+
+
         </ul>
 
         {/* Phone Number */}
@@ -144,6 +153,13 @@ const Navbar = () => {
               </Link>
             </ul>
           )}
+                
+            <HashLink smooth to="#contact">
+  <li className="hover:text-blue-600">
+    Contact Us
+  </li>
+</HashLink>
+
 
           <li className="text-black font-semibold flex gap-2">
             <PhoneCall />
