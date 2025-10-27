@@ -9,7 +9,6 @@ const Services = () => {
     "Amazon",
     "Meesho",
     "Flipkart",
-    "Glowroad",
     "JioMart",
     "Amazon Global",
   ];

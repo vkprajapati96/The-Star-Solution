@@ -13,10 +13,10 @@ function Home() {
   return (
     <div>
         <HeroSection/>
-        <AboutUs/>
+        {/* <AboutUs/> */}
         <IconSections/>
-        <Services/>
         <Specialization/>
+        <Services/>
         <PartnersSection/>
         <Testimonials/>
         <ContactUs/>

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -7,11 +8,15 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Left: Logo and About */}
         <div className="flex flex-col gap-4">
+        <Link to="/">
           <img
              src="https://thestarsolution.com/assets/TSS_PNG-BUcIzKxo.png"
-            alt="Star Solution Logo"
-            className="w-32 h-auto"
-          />
+             alt="Star Solution Logo"
+             
+             className="w-32 h-auto"
+             />
+            
+             </Link>
           <h3 className="text-white font-bold text-lg">The Star Solution</h3>
           <p className="text-gray-400 text-sm">
             Empowering Your Business

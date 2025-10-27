@@ -1,11 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { X, ChevronDown, Menu, PhoneCall, HousePlus } from "lucide-react";
-import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { Link, useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const dropdownRef = useRef(null);
+  const navigate = useNavigate();
+
+  // ✅ Close dropdown when clicking outside (Desktop)
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowServices(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // ✅ Function to handle service click in mobile
+  const handleServiceClick = (path) => {
+    setShowServices(false);
+    setOpen(false);
+    navigate(path);
+  };
 
   return (
     <nav className="bg-white shadow-md z-50 relative">
@@ -24,26 +44,25 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-12 font-semibold text-black relative">
           <Link to="/">
-            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+            <li className="text-xl flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               <HousePlus className="w-6 h-6" /> Home
             </li>
           </Link>
 
           <Link to="/about">
-            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+            <li className="text-xl cursor-pointer hover:text-blue-600 transition">
               About Us
             </li>
           </Link>
 
           {/* Services Dropdown */}
           <li
-            className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition relative"
+            ref={dropdownRef}
+            className="text-xl flex items-center gap-1 cursor-pointer hover:text-blue-600 transition relative"
             onClick={() => setShowServices(!showServices)}
           >
             Services
             <ChevronDown className="w-4 h-4 mt-1" />
-
-            {/* Dropdown Popup */}
             {showServices && (
               <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-lg w-[300px] py-4 px-4 z-50">
                 <ul className="flex flex-col gap-3 text-gray-700 font-medium">
@@ -82,19 +101,17 @@ const Navbar = () => {
             )}
           </li>
 
-<HashLink smooth to="#contact">
-  <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
-    Contact Us
-  </li>
-</HashLink>
-
-
+          <HashLink smooth to="#contact">
+            <li className="text-xl cursor-pointer hover:text-blue-600 transition">
+              Contact Us
+            </li>
+          </HashLink>
         </ul>
 
         {/* Phone Number */}
         <div className="hidden lg:block text-black font-bold text-lg">
           <div className="flex items-center gap-2">
-            <PhoneCall className="w-6 h-6 font-semibold text-xl" />
+            <PhoneCall className="w-6 h-6" />
             <span className="text-xl font-semibold">+(91) 9623231885</span>
           </div>
         </div>
@@ -105,7 +122,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ✅ Mobile Menu */}
       <div
         className={`md:hidden bg-white border-t transition-all duration-500 ease-in-out overflow-hidden ${
           open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
@@ -122,7 +139,7 @@ const Navbar = () => {
             <li className="hover:text-blue-600">About Us</li>
           </Link>
 
-          {/* Services inside mobile */}
+          {/* ✅ Services Dropdown in Mobile */}
           <li
             onClick={() => setShowServices(!showServices)}
             className="flex items-center gap-1 cursor-pointer hover:text-blue-600"
@@ -133,33 +150,48 @@ const Navbar = () => {
 
           {showServices && (
             <ul className="ml-4 flex flex-col gap-2 text-gray-700">
-              <Link to="/services/ecommerce" onClick={() => setOpen(false)}>
-                <li className="hover:text-blue-600">E-commerce</li>
-              </Link>
-              <Link to="/services/digital-marketing" onClick={() => setOpen(false)}>
-                <li className="hover:text-blue-600">Digital Marketing</li>
-              </Link>
-              <Link to="/services/free-support" onClick={() => setOpen(false)}>
-                <li className="hover:text-blue-600">Free Support</li>
-              </Link>
-              <Link to="/services/web-development" onClick={() => setOpen(false)}>
-                <li className="hover:text-blue-600">Web Development</li>
-              </Link>
-              <Link to="/services/app-development" onClick={() => setOpen(false)}>
-                <li className="hover:text-blue-600">App Development</li>
-              </Link>
-              <Link to="/services/bpo" onClick={() => setOpen(false)}>
-                <li className="hover:text-blue-600">BPO Service</li>
-              </Link>
+              <li
+                className="hover:text-blue-600 cursor-pointer"
+                onClick={() => handleServiceClick("/services/ecommerce")}
+              >
+                E-commerce
+              </li>
+              <li
+                className="hover:text-blue-600 cursor-pointer"
+                onClick={() => handleServiceClick("/services/digital-marketing")}
+              >
+                Digital Marketing
+              </li>
+              <li
+                className="hover:text-blue-600 cursor-pointer"
+                onClick={() => handleServiceClick("/services/free-support")}
+              >
+                Free Support
+              </li>
+              <li
+                className="hover:text-blue-600 cursor-pointer"
+                onClick={() => handleServiceClick("/services/web-development")}
+              >
+                Web Development
+              </li>
+              <li
+                className="hover:text-blue-600 cursor-pointer"
+                onClick={() => handleServiceClick("/services/app-development")}
+              >
+                App Development
+              </li>
+              <li
+                className="hover:text-blue-600 cursor-pointer"
+                onClick={() => handleServiceClick("/services/bpo")}
+              >
+                BPO Service
+              </li>
             </ul>
           )}
-                
-            <HashLink smooth to="#contact">
-  <li className="hover:text-blue-600">
-    Contact Us
-  </li>
-</HashLink>
 
+          <HashLink smooth to="#contact" onClick={() => setOpen(false)}>
+            <li className="hover:text-blue-600">Contact Us</li>
+          </HashLink>
 
           <li className="text-black font-semibold flex gap-2">
             <PhoneCall />
