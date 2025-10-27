@@ -10,10 +10,14 @@ import WebDevelopment from './pages/services/WebDevelopment'
 import AppDevelopment from './pages/services/AppDevelopment'
 import BpoService from './pages/services/BpoService'
 import Ecommerce from './pages/services/Ecommerce'
+import SnakeCursor from './components/SnakeDotCursor'
 
 function App() {
   return (
     <div>
+              <SnakeCursor />
+
+
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />

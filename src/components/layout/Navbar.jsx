@@ -137,22 +137,22 @@ const Navbar = () => {
 
           {showServices && (
             <ul className="ml-4 flex flex-col gap-2 text-gray-700">
-              <Link to="/services/ecommerce" onClick={() => setOpen(false)}>
+              <Link to="/services/ecommerce" onClick={() =>{ setShowServices(false); setOpen(false)}}>
                 <li className="hover:text-blue-600">E-commerce</li>
               </Link>
-              <Link to="/services/digital-marketing" onClick={() => setOpen(false)}>
+              <Link to="/services/digital-marketing" onClick={() =>{ setShowServices(false); setOpen(false)}}>
                 <li className="hover:text-blue-600">Digital Marketing</li>
               </Link>
-              <Link to="/services/free-support" onClick={() => setOpen(false)}>
+              <Link to="/services/free-support" onClick={() =>{ setShowServices(false); setOpen(false)}}>
                 <li className="hover:text-blue-600">Free Support</li>
               </Link>
-              <Link to="/services/web-development" onClick={() => setOpen(false)}>
+              <Link to="/services/web-development" onClick={() =>{ setShowServices(false); setOpen(false)}}>
                 <li className="hover:text-blue-600">Web Development</li>
               </Link>
-              <Link to="/services/app-development" onClick={() => setOpen(false)}>
+              <Link to="/services/app-development" onClick={() =>{ setShowServices(false); setOpen(false)}}>
                 <li className="hover:text-blue-600">App Development</li>
               </Link>
-              <Link to="/services/bpo" onClick={() => setOpen(false)}>
+              <Link to="/services/bpo" onClick={() =>{ setShowServices(false); setOpen(false)}}>
                 <li className="hover:text-blue-600">BPO Service</li>
               </Link>
             </ul>
