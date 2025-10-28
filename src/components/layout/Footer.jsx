@@ -1,6 +1,7 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png"
 
 const Footer = () => {
   return (
@@ -10,31 +11,39 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
         <Link to="/">
           <img
-             src="https://thestarsolution.com/assets/TSS_PNG-BUcIzKxo.png"
-             alt="Star Solution Logo"
+             src={logo}
+             alt="the Star Solution Logo"
              
              className="w-32 h-auto"
-             />
             
+            
+            />
              </Link>
           <h3 className="text-white font-bold text-lg">The Star Solution</h3>
           <p className="text-gray-400 text-sm">
             Empowering Your Business
           </p>
           <p className="text-gray-400 text-sm">
-            We specialize in empowering businesses to shine in the digital era. From driving e-commerce success to crafting engaging websites and mobile apps, we are your trusted partner for innovation and growth. Our digital marketing expertise ensures your brand reaches its target audience effectively, while our BPO services streamline operations and enhance customer satisfaction.
+            We specialize in empowering businesses to shine in the digital era. From driving e-commerce success to crafting engaging websites and mobile apps, we are your trusted partner for innovation and growth. Our digital marketing expertise ensures your brand reaches its target audience effectively, while our BPO services streamline operations  <br />
+             and enhance customer satisfaction.
           </p>
+
           {/* Social Icons */}
+          
           <div className="flex gap-4 mt-2">
-            <a href="#" className="text-gray-400 hover:text-yellow-500">
+
+            <a href="https://www.instagram.com/thestar_solution/?hl=en" className="text-gray-400 hover:text-yellow-500">
               <FaInstagram size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-yellow-500">
+            
+            <a href="https://www.facebook.com/thestarsolution/" className="text-gray-400 hover:text-yellow-500">
               <FaFacebookF size={20} />
             </a>
-            <a href="#" className="text-gray-400 hover:text-yellow-500">
-              <FaLinkedinIn size={20} />
+            
+            <a href="https://www.linkedin.com/company/the-star-solution/" className="text-gray-400 hover:text-yellow-500">
+              <FaLinkedinIn size={20}   />
             </a>
+
           </div>
         </div>
 

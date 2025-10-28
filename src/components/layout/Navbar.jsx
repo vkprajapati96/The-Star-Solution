@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { X, ChevronDown, Menu, PhoneCall, HousePlus } from "lucide-react";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,27 +14,33 @@ const Navbar = () => {
         {/* Logo */}
         <div>
           <Link to="/">
-            <img
-              className="w-[140px]"
-              src="https://thestarsolution.com/assets/TSS_PNG-BUcIzKxo.png"
-              alt="Logo"
-            />
+            <img className="w-[140px]" src={logo} alt="Logo" />
           </Link>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-12 font-semibold text-black relative">
-          <Link to="/" onClick={()=>setShowServices(false)} >
+          <Link to="/" onClick={() => setShowServices(false)}>
             <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               <HousePlus className="w-6 h-6" /> Home
             </li>
           </Link>
 
-          <Link to="/about" onClick={()=>setShowServices(false)}>
+          <Link to="/about" onClick={() => setShowServices(false)}>
             <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               About Us
             </li>
           </Link>
+          <a
+            href="https://www.bharatdropshipping.shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setShowServices(false)}
+          >
+            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+              Drop Shipping
+            </li>
+          </a>
 
           {/* Services Dropdown */}
           <li
@@ -42,7 +49,6 @@ const Navbar = () => {
           >
             Services
             <ChevronDown className="w-4 h-4 mt-1" />
-
             {/* Dropdown Popup */}
             {showServices && (
               <div className="absolute top-full left-0 mt-2 bg-white border rounded-lg shadow-lg w-[300px] py-4 px-4 z-50">
@@ -82,13 +88,11 @@ const Navbar = () => {
             )}
           </li>
 
-<HashLink smooth to="#contact" onClick={()=>setShowServices(false)} >
-  <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
-    Contact Us
-  </li>
-</HashLink>
-
-
+          <Link to="/contact" onClick={() => setShowServices(false)}>
+            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+              Contact Us
+            </li>
+          </Link>
         </ul>
 
         {/* Phone Number */}
@@ -100,14 +104,11 @@ const Navbar = () => {
           </div>
         </div>
 
-
         {/* Mobile Menu Button */}
         <button className="md:hidden text-black" onClick={() => setOpen(!open)}>
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
-
-
 
       {/* Mobile Menu */}
       <div
@@ -137,33 +138,66 @@ const Navbar = () => {
 
           {showServices && (
             <ul className="ml-4 flex flex-col gap-2 text-gray-700">
-              <Link to="/services/ecommerce" onClick={() =>{ setShowServices(false); setOpen(false)}}>
+              <Link
+                to="/services/ecommerce"
+                onClick={() => {
+                  setShowServices(false);
+                  setOpen(false);
+                }}
+              >
                 <li className="hover:text-blue-600">E-commerce</li>
               </Link>
-              <Link to="/services/digital-marketing" onClick={() =>{ setShowServices(false); setOpen(false)}}>
+              <Link
+                to="/services/digital-marketing"
+                onClick={() => {
+                  setShowServices(false);
+                  setOpen(false);
+                }}
+              >
                 <li className="hover:text-blue-600">Digital Marketing</li>
               </Link>
-              <Link to="/services/free-support" onClick={() =>{ setShowServices(false); setOpen(false)}}>
+              <Link
+                to="/services/free-support"
+                onClick={() => {
+                  setShowServices(false);
+                  setOpen(false);
+                }}
+              >
                 <li className="hover:text-blue-600">Free Support</li>
               </Link>
-              <Link to="/services/web-development" onClick={() =>{ setShowServices(false); setOpen(false)}}>
+              <Link
+                to="/services/web-development"
+                onClick={() => {
+                  setShowServices(false);
+                  setOpen(false);
+                }}
+              >
                 <li className="hover:text-blue-600">Web Development</li>
               </Link>
-              <Link to="/services/app-development" onClick={() =>{ setShowServices(false); setOpen(false)}}>
+              <Link
+                to="/services/app-development"
+                onClick={() => {
+                  setShowServices(false);
+                  setOpen(false);
+                }}
+              >
                 <li className="hover:text-blue-600">App Development</li>
               </Link>
-              <Link to="/services/bpo" onClick={() =>{ setShowServices(false); setOpen(false)}}>
+              <Link
+                to="/services/bpo"
+                onClick={() => {
+                  setShowServices(false);
+                  setOpen(false);
+                }}
+              >
                 <li className="hover:text-blue-600">BPO Service</li>
               </Link>
             </ul>
           )}
-                
-            <HashLink smooth to="#contact">
-  <li className="hover:text-blue-600">
-    Contact Us
-  </li>
-</HashLink>
 
+          <Link to="/contact" onClick={() => setOpen(false)}>
+            <li className="hover:text-blue-600">Contact Us</li>
+          </Link>
 
           <li className="text-black font-semibold flex gap-2">
             <PhoneCall />
@@ -175,4 +209,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

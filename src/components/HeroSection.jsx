@@ -64,27 +64,21 @@ const HeroSection = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-5 justify-center pb-4 mt-10">
-            <button className="cursor-pointer px-10 md:px-14 py-2 text-white text-lg font-semibold border border-yellow-400 rounded-full hover:shadow-[0_4px_8px_rgba(253,224,71,0.4)] transition-shadow duration-300">
-              Let's Get Started
-            </button>
-
+          <div className="flex  justify-center pb-4 mt-10">
+           
             <HashLink to="#contact">
             <button className="cursor-pointer px-10 md:px-14 py-2 text-white text-lg font-semibold border border-yellow-400 rounded-full hover:shadow-[0_4px_8px_rgba(253,224,71,0.4)] transition-shadow duration-300">
-              Activate Free Trial
+              Get Free Consultation
             </button>
             </HashLink>
 
           </div>
         </div>
 
-        {/* ↓↓↓ CHANGE #1: hidden md:block → hidden md:flex + adjust spacing */}
-        {/* Pehle pure section ko hide karne se bada gap aata tha.
-            Ab yeh md:flex hai, to height consistent rahegi aur gap kam hoga. */}
+       
         <div className='hidden md:flex justify-center'>
           <div className="flex flex-wrap justify-center items-center gap-8 mt-12 md:mt-20">
-            {/* ↓↓↓ CHANGE #2: mt-36 → mt-20 (kam spacing) */}
-            {/* isse top ka gap kam ho gaya */}
+        
             <img
               src="https://spectrumbpo.com/wp-content/uploads/2025/10/LG-03.webp?w=100&h=40"
               alt="Logo1"

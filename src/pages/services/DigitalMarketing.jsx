@@ -1,6 +1,8 @@
 import React from "react";
 import ContactUs from "../../components/ContactUs";
 
+import about  from "../../assets/about.jpeg"
+
 const DigitalMarketing = () => {
 const features = [
     {
@@ -62,7 +64,7 @@ const features = [
     {/* Right Image Section */}
     <div className="w-full lg:w-1/2 flex items-center justify-center">
       <img
-        src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg"
+        src={about} 
         alt="Digital Marketing"
         className="w-full h-[300px] md:h-[400px] lg:h-[350px] rounded-lg shadow-lg object-cover"
       />

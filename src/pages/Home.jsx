@@ -8,6 +8,9 @@ import PartnersSection from '../components/Partners'
 import Testimonials from '../components/Testimonial'
 import ContactUs from '../components/ContactUs'
 import GoogleMap from '../components/GoogleMAp'
+import Certificates from '../components/Certificates'
+import AwardSection from '../components/AwardSection'
+import OurTeam from '../components/OurTeam'
 
 function Home() {
   return (
@@ -17,7 +20,10 @@ function Home() {
         <IconSections/>
         <Specialization/>
         <Services/>
+        <Certificates/>
+        <AwardSection/>
         <PartnersSection/>
+        <OurTeam/>
         <Testimonials/>
         <ContactUs/>
         <GoogleMap/>

@@ -1,6 +1,8 @@
 import React from "react";
 import ContactUs from "../../components/ContactUs";
 
+import freeSupport from "../../assets/freeSupport.jpeg"
+
 const FreeSupport = () => {
 const features = [
     {
@@ -63,7 +65,7 @@ const features = [
         {/* Right Image */}
         <div className="flex-1 flex justify-center">
           <img
-            src="https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg"
+          src={freeSupport}
             alt="Ecommerce Support"
             className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[85%] rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
           />

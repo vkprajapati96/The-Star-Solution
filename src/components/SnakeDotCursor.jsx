@@ -1,20 +1,17 @@
 import React, { useEffect, useRef } from "react";
 
 const SnakeCursor = () => {
-  const snakeLength = 20; // 🐍 Dots in the snake
+  const snakeLength = 20; //  Dots in the snake
   const trail = useRef([]);
   const mouse = useRef({ x: 0, y: 0 });
   const dots = useRef([]);
   const requestRef = useRef(null);
 
-  // 🐢 Speed control (0.02 = slow, 0.1 = fast)
-  const speed = 0.05;
+  const speed = .9    ;
 
   useEffect(() => {
-    // ✅ Cursor visible (remove none)
     // document.body.style.cursor = "none"; ❌ remove this
 
-    // 🟢 Create snake dots
     for (let i = 0; i < snakeLength; i++) {
       const dot = document.createElement("div");
       dot.style.position = "fixed";
@@ -40,7 +37,7 @@ const SnakeCursor = () => {
     window.addEventListener("mousemove", handleMouseMove);
 
     const animate = () => {
-      // 🐍 Lead dot follows cursor with adjustable speed
+      //  Lead dot follows cursor with adjustable speed
       trail.current[0].x += (mouse.current.x - trail.current[0].x) * speed;
       trail.current[0].y += (mouse.current.y - trail.current[0].y) * speed;
 

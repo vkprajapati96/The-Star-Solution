@@ -1,6 +1,8 @@
 import React from 'react'
 import ContactUs from '../../components/ContactUs';
 
+import webDev from "../../assets/web-dev.jpg";
+
 const WebDevelopment = () => {
 
   const features = [
@@ -62,7 +64,7 @@ const WebDevelopment = () => {
         {/* Right Side - Image */}
         <div className="flex-1 flex justify-center">
           <img
-            src="https://i.ibb.co/KmYgRbS/web-devlp.jpg"
+            src={webDev}
             alt="Website Development"
             className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[85%] rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
           />

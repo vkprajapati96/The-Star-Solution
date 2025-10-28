@@ -1,6 +1,8 @@
 import React from 'react'
 import ContactUs from '../../components/ContactUs';
 
+import bpo from "../../assets/bpo.jpg";
+
 const BpoService = () => {
 
   const features = [
@@ -60,7 +62,7 @@ const BpoService = () => {
         {/* Right Side (Image) */}
         <div className="flex-1 flex justify-center">
           <img
-            src="https://media.istockphoto.com/id/2152298806/photo/in-a-business-team-meeting-success-is-celebrated-with-a-handshake-hands-close-up-dressed-in.jpg?b=1&s=612x612&w=0&k=20&c=2d4lPACIVPKu_wFDTZx8Xl_uCq2LolgH6laXWl6baQU="
+            src={bpo}
             alt="BPO Solutions"
             className="w-full max-w-sm md:max-w-md rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
           />

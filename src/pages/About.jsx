@@ -3,6 +3,9 @@ import { FaUsers, FaLightbulb, FaRocket } from "react-icons/fa";
 // import { MapPin, Mail, Phone } from "lucide-react";
 import ContactUs from "../components/ContactUs";
 
+import about from "../assets/about.jpeg"
+import about2 from "../assets/about2.jpeg"
+import about3 from "../assets/about3.jpeg"
 
 const About = () => {
   return ( <>
@@ -45,7 +48,7 @@ const About = () => {
         {/* Image Div */}
         <div className="md:w-1/2 flex items-center">
           <img 
-            src="https://images.pexels.com/photos/3184416/pexels-photo-3184416.jpeg" 
+            src={about} 
             alt="About Us" 
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
@@ -60,7 +63,7 @@ const About = () => {
         {/* Image Div first */}
         <div className="md:w-1/2 flex items-center">
           <img 
-            src="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg" 
+            src={about2} 
             alt="Who Are We" 
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
@@ -101,7 +104,7 @@ const About = () => {
         {/* Image Div second */}
         <div className="md:w-1/2 flex items-center">
           <img 
-            src="https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg" 
+            src={about3} 
             alt="Our Vision" 
             className="w-full h-auto rounded-lg shadow-lg object-cover"
           />

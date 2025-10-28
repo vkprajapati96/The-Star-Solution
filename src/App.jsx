@@ -11,12 +11,14 @@ import AppDevelopment from './pages/services/AppDevelopment'
 import BpoService from './pages/services/BpoService'
 import Ecommerce from './pages/services/Ecommerce'
 import SnakeCursor from './components/SnakeDotCursor'
+import ScrollTop from './components/ScrollBar'
+import Contact from './pages/Contact'
 
 function App() {
   return (
     <div>
-              <SnakeCursor />
-
+      <ScrollTop/>
+      <SnakeCursor />
 
       <Navbar/>
       <Routes>
@@ -33,6 +35,7 @@ function App() {
         <Route path="/services/bpo" element={<BpoService />} />
 
 
+        <Route path='/contact' element={<Contact/>} />
 
       </Routes>
       <Footer/>

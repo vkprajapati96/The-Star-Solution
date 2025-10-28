@@ -1,6 +1,9 @@
 import React from 'react'
 import ContactUs from '../../components/ContactUs';
 
+import appDev from "../../assets/app-dev.jpg";
+
+
 const AppDevelopment = () => {
 
 const features = [
@@ -59,7 +62,7 @@ const features = [
           {/* Right Side (Image) */}
           <div className="flex-1 flex justify-center">
             <img
-              src="https://i.ibb.co/qMn42HK/app-development-2.jpg"
+              src={appDev}
               alt="App Development"
               className="w-full max-w-sm md:max-w-md rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
             />
