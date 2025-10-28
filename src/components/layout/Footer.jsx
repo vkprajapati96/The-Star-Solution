@@ -14,7 +14,7 @@ const Footer = () => {
              src={logo}
              alt="the Star Solution Logo"
              
-             className="w-32 h-auto"
+             className="w-32 h-auto "
             
             
             />
