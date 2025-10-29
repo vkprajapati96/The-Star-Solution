@@ -19,7 +19,7 @@ function Home() {
     <div>
         <HeroSection/>
         {/* <AboutUs/> */}
-        <IconSections/>
+        {/* <IconSections/> */}
         <Specialization/>
         <Services/>
         <Certificates/>

@@ -76,7 +76,7 @@ const OurTeam = () => {
             {teamImages.map((img, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[220px] sm:w-[260px] md:w-[300px] transition-transform duration-300 hover:scale-105"
+                className="shrink-0 pt-6 w-[220px] sm:w-[260px] md:w-[300px] transition-transform duration-300 hover:scale-105"
               >
                 <img
                   src={img}

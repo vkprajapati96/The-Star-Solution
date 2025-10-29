@@ -3,7 +3,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 const ContactUs = () => {
   return (
-    <section  className="bg-gray-100 text-gray-900 pt-4  pb-16 px-4 sm:px-6 lg:px-8">
+    <section  className="bg-gray-100 text-gray-900 pt-12  pb-16 px-4 sm:px-6 lg:px-8">
       {/* Top Title */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wide text-yellow-600">
@@ -49,17 +49,23 @@ const ContactUs = () => {
         <div className="flex-1 flex flex-col justify-start gap-6 p-8 sm:p-10">
           <div className="flex items-center gap-3">
             <MapPin size={24} className="text-yellow-500" />
-            <span className="text-lg sm:text-xl font-semibold">
+            <span className="text-lg sm:text-xl text-black">
              The Star Solution
             </span>
           </div>
           <div className="flex items-center gap-3">
             <Mail size={24} className="text-yellow-500" />
-            <span className="text-lg sm:text-xl">contact@starsolution.in</span>
+            <span className="text-lg text-black sm:text-xl">info@thestarsolution.com,
+hr@thestarsolution.com
+
+</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone size={24} className="text-yellow-500" />
-            <span className="text-lg sm:text-xl">+91 9876543210</span>
+            <span className="text-lg text-black sm:text-xl">0120 4120438 ,
+
+
++91 9670242590</span>
           </div>
 
           {/* Description */}

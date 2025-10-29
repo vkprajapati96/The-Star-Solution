@@ -5,7 +5,7 @@ import certi1 from "../assets/image/certificates/certificate1.jpg";
 import certi2 from "../assets/image/certificates/certificate2.jpg";
 import certi3 from "../assets/image/certificates/certificate3.jpg";
 import certi4 from "../assets/image/certificates/certificate4.jpg";
-import certi5 from "../assets/image/certificates/certificate5.jpg";
+// import certi5 from "../assets/image/certificates/certificate5.jpg";
 import certi6 from "../assets/image/certificates/certificate6.jpg";
 import certi7 from "../assets/image/certificates/certificate7.jpg";
 import certi8 from "../assets/image/certificates/certificate8.jpg";
@@ -30,7 +30,7 @@ const Certificates = () => {
     certi2,
     certi3,
     certi4,
-    certi5,
+    // certi5,
     certi6,
     certi7,
     certi8,
@@ -67,7 +67,7 @@ const Certificates = () => {
           {certificateImages.map((src, index) => (
             <div
               key={index}
-              className="shrink-0 w-[260px] sm:w-[300px] md:w-[340px] h-[220px] sm:h-[260px] md:h-[300px] flex items-center justify-center rounded-lg hover:scale-105 transition-transform duration-300 "
+              className="shrink-0 w-[260px] pt-4 sm:w-[300px] md:w-[340px] h-[220px] sm:h-[260px] md:h-[300px] flex items-center justify-center rounded-lg hover:scale-105 transition-transform duration-300 "
             >
               <img
                 src={src}

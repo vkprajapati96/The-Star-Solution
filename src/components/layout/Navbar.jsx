@@ -99,7 +99,7 @@ const Navbar = () => {
         <div className="hidden lg:block text-black font-bold text-lg">
           <div className="flex items-center gap-2">
             <PhoneCall className="w-6 h-6 font-semibold text-xl" />
-            <span className="text-lg font-semibold">+(91) 9623231885</span>
+            <span className="text-lg font-semibold">01204120438</span>
           </div>
         </div>
 
@@ -200,7 +200,7 @@ const Navbar = () => {
 
           <li className="text-black font-semibold flex gap-2">
             <PhoneCall />
-            <span>9623231885</span>
+            <span> 01204120438</span>
           </li>
         </ul>
       </div>

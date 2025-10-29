@@ -5,13 +5,19 @@ import myntra from "../assets/partnerImg/Myntra-Logo.png";
 import meesho from "../assets/partnerImg/meesho.png";
 import swiggy from "../assets/partnerImg/swiggy.png";
 import byjus from "../assets/partnerImg/Byju's.png";
-import glowroad from "../assets/partnerImg/glowRoad.webp";
+// import glowroad from "../assets/partnerImg/glowRoad.webp";
 import cars24 from "../assets/partnerImg/cars24.png";
 import hcl from "../assets/partnerImg/HCL.png";
 import jioMart2 from "../assets/partnerImg/JioMart-.jpg";
 import tcs from "../assets/partnerImg/tcs.png";
 import zomato from "../assets/partnerImg/Zomato.png";
 import fundnation from "../assets/partnerImg/fundnation.jpeg";
+import shipglobal from "../assets/partnerImg/shipglobal.png";
+import shiprocket from "../assets/partnerImg/shiprocket.png";
+import smartbiz from "../assets/partnerImg/smartbiz.png";
+import ebay from "../assets/partnerImg/ebay.png";
+import ola from "../assets/partnerImg/ola.png";
+import walmart from "../assets/partnerImg/walmart.png";
 
 const PartnersSection = () => {
   // All logos in a single array for uniform structure
@@ -24,11 +30,17 @@ const PartnersSection = () => {
     jioMart2,
     swiggy,
     byjus,
-    glowroad,
+    walmart,
+    // glowroad,
     cars24,
     hcl,
     tcs,
     zomato,
+    shipglobal,
+    shiprocket,
+    smartbiz,
+    ebay,
+    ola
   ];
 
   return (

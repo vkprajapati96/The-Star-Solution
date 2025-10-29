@@ -55,11 +55,18 @@ const ContactUs = () => {
           </div>
           <div className="flex items-center gap-3">
             <Mail size={24} className="text-yellow-500" />
-            <span className="text-lg sm:text-xl">contact@starsolution.in</span>
+            <span className="text-lg text-black sm:text-xl">
+              info@thestarsolution.com, 
+            hr@thestarsolution.com
+
+</span>
           </div>
           <div className="flex items-center gap-3">
             <Phone size={24} className="text-yellow-500" />
-            <span className="text-lg sm:text-xl">+91 9876543210</span>
+            <span className="text-lg text-black sm:text-xl">0120 4120438 ,
+
+
++91 9670242590</span>
           </div>
 
           {/* Description */}
