@@ -6,8 +6,8 @@ const ContactUs = () => {
     <section id="contact" className="bg-gray-100 text-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       {/* Top Title */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-wide text-yellow-600">
-          Contact Us
+        <h2 className="text-3xl sm:text-4xl  font-bold tracking-wide text-yellow-600">
+          CONTACT US
         </h2>
       </div>
 

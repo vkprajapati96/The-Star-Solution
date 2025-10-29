@@ -18,6 +18,7 @@ const About = () => {
             Grow 10X times faster by Our Expertise
           </h2>
           <p className="text-white text-lg md:text-base">
+
             Welcome to, your trusted partner in driving business growth and success. 
             With a proven track record of excellence and innovation, we specialize in 
             providing comprehensive services in IT, E-Commerce, Digital Marketing, 
@@ -26,20 +27,21 @@ const About = () => {
             delivering unmatched customer support solutions. With years of experience 
             and a deep understanding of diverse industries, we pride ourselves on being 
             a reliable and forward-thinking company.
-          </p>
+         
+        </p>
 
           {/* Optional bullet points with icons */}
           <ul className="mt-4 flex flex-col gap-3">
             <li className="flex items-center gap-3 text-white">
-              <FaUsers className="text-yellow-600 text-xl flex-shrink-0" />
+              <FaUsers className="text-yellow-600 text-xl shrink-0" />
               Experienced Team
             </li>
             <li className="flex items-center gap-3 text-white">
-              <FaRocket className="text-yellow-600 text-xl flex-shrink-0" />
+              <FaRocket className="text-yellow-600 text-xl shrink-0" />
               Fast Business Growth
             </li>
             <li className="flex items-center gap-3 text-white">
-              <FaLightbulb className="text-yellow-600 text-xl flex-shrink-0" />
+              <FaLightbulb className="text-yellow-600 text-xl shrink-0" />
               Innovative Solutions
             </li>
           </ul>

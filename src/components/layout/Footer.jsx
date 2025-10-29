@@ -23,10 +23,17 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             Empowering Your Business
           </p>
+
+
+
+        
           <p className="text-gray-400 text-sm">
             We specialize in empowering businesses to shine in the digital era. From driving e-commerce success to crafting engaging websites and mobile apps, we are your trusted partner for innovation and growth. Our digital marketing expertise ensures your brand reaches its target audience effectively, while our BPO services streamline operations  <br />
              and enhance customer satisfaction.
+         
+          
           </p>
+
 
           {/* Social Icons */}
           

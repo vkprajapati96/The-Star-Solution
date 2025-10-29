@@ -1,16 +1,17 @@
 import React, { useEffect, useRef } from "react";
 
 const SnakeCursor = () => {
-  const snakeLength = 20; //  Dots in the snake
+  const snakeLength = 10; 
   const trail = useRef([]);
   const mouse = useRef({ x: 0, y: 0 });
   const dots = useRef([]);
   const requestRef = useRef(null);
 
-  const speed = .9    ;
+  const speed = 0.09    ;
 
   useEffect(() => {
-    // document.body.style.cursor = "none"; ❌ remove this
+    // document.body.style.cursor = "none"; 
+
 
     for (let i = 0; i < snakeLength; i++) {
       const dot = document.createElement("div");
@@ -53,6 +54,7 @@ const SnakeCursor = () => {
         const dot = dots.current[i];
         const pos = trail.current[i];
         dot.style.transform = `translate(${pos.x - 5}px, ${pos.y - 5}px)`;
+      
       }
 
       requestRef.current = requestAnimationFrame(animate);
@@ -65,6 +67,7 @@ const SnakeCursor = () => {
       window.removeEventListener("mousemove", handleMouseMove);
       dots.current.forEach((dot) => document.body.removeChild(dot));
     };
+    
   }, []);
 
   return null;

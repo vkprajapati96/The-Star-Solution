@@ -9,7 +9,7 @@ const Navbar = () => {
   const [showServices, setShowServices] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md z-50 relative">
+    <nav className="bg-white/95 backdrop-blur-sm shadow-md z-50 sticky top-0 w-full">
       <div className="w-full max-w-[1340px] mx-auto flex justify-between items-center py-2 px-4">
         {/* Logo */}
         <div>
@@ -21,13 +21,13 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-12 font-semibold text-black relative">
           <Link to="/" onClick={() => setShowServices(false)}>
-            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               <HousePlus className="w-6 h-6" /> Home
             </li>
           </Link>
 
           <Link to="/about" onClick={() => setShowServices(false)}>
-            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               About Us
             </li>
           </Link>
@@ -37,14 +37,14 @@ const Navbar = () => {
             rel="noopener noreferrer"
             onClick={() => setShowServices(false)}
           >
-            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               Drop Shipping
             </li>
           </a>
 
           {/* Services Dropdown */}
           <li
-            className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition relative"
+            className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition relative"
             onClick={() => setShowServices(!showServices)}
           >
             Services
@@ -89,18 +89,17 @@ const Navbar = () => {
           </li>
 
           <Link to="/contact" onClick={() => setShowServices(false)}>
-            <li className="text-xl font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
               Contact Us
             </li>
           </Link>
         </ul>
 
         {/* Phone Number */}
-
         <div className="hidden lg:block text-black font-bold text-lg">
           <div className="flex items-center gap-2">
             <PhoneCall className="w-6 h-6 font-semibold text-xl" />
-            <span className="text-xl font-semibold">+(91) 9623231885</span>
+            <span className="text-lg font-semibold">+(91) 9623231885</span>
           </div>
         </div>
 

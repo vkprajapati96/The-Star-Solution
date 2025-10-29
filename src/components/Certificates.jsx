@@ -67,7 +67,7 @@ const Certificates = () => {
           {certificateImages.map((src, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[260px] sm:w-[300px] md:w-[340px] h-[220px] sm:h-[260px] md:h-[300px] bg-white flex items-center justify-center rounded-lg hover:scale-105 transition-transform duration-300 shadow-sm"
+              className="shrink-0 w-[260px] sm:w-[300px] md:w-[340px] h-[220px] sm:h-[260px] md:h-[300px] flex items-center justify-center rounded-lg hover:scale-105 transition-transform duration-300 "
             >
               <img
                 src={src}

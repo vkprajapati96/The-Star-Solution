@@ -11,6 +11,8 @@ import GoogleMap from '../components/GoogleMAp'
 import Certificates from '../components/Certificates'
 import AwardSection from '../components/AwardSection'
 import OurTeam from '../components/OurTeam'
+import SatisfactionSection from '../components/SatisfactionSection'
+
 
 function Home() {
   return (
@@ -25,6 +27,7 @@ function Home() {
         <PartnersSection/>
         <OurTeam/>
         <Testimonials/>
+        <SatisfactionSection/>
         <ContactUs/>
         <GoogleMap/>
     </div>
