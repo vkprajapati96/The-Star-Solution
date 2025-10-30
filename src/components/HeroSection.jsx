@@ -1,5 +1,9 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
+import heroimg1 from "../assets/heroimg1.webp"
+import heroimg2 from "../assets/heroimg2.png"
+import heroimg3 from "../assets/heroimg3.png"
+import heroimg4 from "../assets/heroimg4.png"
 
 const HeroSection = () => {
   const services = [
@@ -17,7 +21,7 @@ const HeroSection = () => {
           <div className="hidden md:block absolute md:top-[90px] lg:top-16 left-16 w-[120px] h-[100px]">
             <img
               className="rounded-full h-28 w-28"
-              src="https://cdn.dribbble.com/userupload/16488169/file/original-63846b87d5e1b30dd8410c06f26db67f.png?resize=752x&vertical=center"
+              src={heroimg1}
               alt="web development"
             />
           </div>
@@ -25,7 +29,7 @@ const HeroSection = () => {
           <div className="hidden md:block absolute md:top-[390px] lg:top-96 left-20 w-[120px] h-[100px]">
             <img
               className="rounded-full h-28 w-28"
-              src="https://cdn-icons-png.freepik.com/512/8026/8026439.png"
+              src={heroimg3}
               alt="Walmart"
             />
           </div>
@@ -34,7 +38,7 @@ const HeroSection = () => {
           <div className="hidden md:block absolute md:top-[50px] lg:top-[40px] right-32 w-[150px] h-[100px]">
             <img
               className="h-32"
-              src="https://cdn-icons-png.flaticon.com/512/8329/8329537.png"
+              src={heroimg2}
               alt="meta add"
             />
           </div>
@@ -42,7 +46,7 @@ const HeroSection = () => {
           <div className="hidden md:block absolute md:top-[450px] lg:top-96 right-28 w-[150px] h-[100px]">
             <img
               className="w-full"
-              src="https://img.pikbest.com/origin/10/42/93/55IpIkbEsTJhy.png!sw800"
+              src={heroimg4}
               alt="eBay"
             />
           </div>

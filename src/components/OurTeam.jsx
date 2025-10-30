@@ -14,6 +14,12 @@ import team10 from "../assets/image/TeamImages/team10.jpeg";
 import team11 from "../assets/image/TeamImages/team11.jpeg";
 import team12 from "../assets/image/TeamImages/team12.jpeg";
 import team13 from "../assets/image/TeamImages/team13.jpeg";
+import team14 from "../assets/image/TeamImages/team14.jpeg";
+import team15 from "../assets/image/TeamImages/team15.jpeg";
+import team16 from "../assets/image/TeamImages/team16.jpeg";
+import team17 from "../assets/image/TeamImages/team17.jpeg";
+import team18 from "../assets/image/TeamImages/team18.jpeg";
+import team19 from "../assets/image/TeamImages/team19.jpeg";
 
 const OurTeam = () => {
   const scrollRef = useRef(null);
@@ -38,12 +44,18 @@ const OurTeam = () => {
     team3,
     team4,
     team5,
+    team15,
+    team16,
+    team17,
+    team18,
+    team19,
     team6,
     team7,
     team8,
     team9,
     team10,
     team11,
+    team14,
     team12,
     team13,
   ];
@@ -76,7 +88,7 @@ const OurTeam = () => {
             {teamImages.map((img, index) => (
               <div
                 key={index}
-                className="shrink-0 pt-6 w-[220px] sm:w-[260px] md:w-[300px] transition-transform duration-300 hover:scale-105"
+                className="shrink-0 w-[220px] sm:w-[260px] md:w-[300px] transition-transform duration-300 hover:scale-105"
               >
                 <img
                   src={img}

@@ -63,9 +63,9 @@ const Navbar = () => {
                       Digital Marketing
                     </li>
                   </Link>
-                  <Link to="/services/free-support">
+                  <Link to="/services/product-photography">
                     <li className="hover:text-blue-600 cursor-pointer transition">
-                      Free Support
+                      Product Photography
                     </li>
                   </Link>
                   <Link to="/services/web-development">
@@ -93,6 +93,13 @@ const Navbar = () => {
               Contact Us
             </li>
           </Link>
+
+           <Link to="/blog" onClick={() => setShowServices(false)}>
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+              Blog
+            </li>
+          </Link>
+
         </ul>
 
         {/* Phone Number */}
@@ -126,6 +133,17 @@ const Navbar = () => {
             <li className="hover:text-blue-600">About Us</li>
           </Link>
 
+  <a
+            href="https://www.bharatdropshipping.shop"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+          >
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+              Drop Shipping
+            </li>
+          </a>
+
           {/* Services inside mobile */}
           <li
             onClick={() => setShowServices(!showServices)}
@@ -156,13 +174,13 @@ const Navbar = () => {
                 <li className="hover:text-blue-600">Digital Marketing</li>
               </Link>
               <Link
-                to="/services/free-support"
+                to="/services/product-photography"
                 onClick={() => {
                   setShowServices(false);
                   setOpen(false);
                 }}
               >
-                <li className="hover:text-blue-600">Free Support</li>
+                <li className="hover:text-blue-600">Product Photography</li>
               </Link>
               <Link
                 to="/services/web-development"
@@ -198,10 +216,20 @@ const Navbar = () => {
             <li className="hover:text-blue-600">Contact Us</li>
           </Link>
 
+           <Link to="/blog" onClick={() => setOpen(false)}>
+            <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-blue-600 transition">
+              Blog
+            </li>
+          </Link>
+
+
           <li className="text-black font-semibold flex gap-2">
             <PhoneCall />
             <span> 01204120438</span>
+
           </li>
+
+
         </ul>
       </div>
     </nav>

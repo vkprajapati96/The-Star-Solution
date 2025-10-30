@@ -1,17 +1,17 @@
 import React, { useRef, useEffect, useState } from "react";
-import amazon from "../assets/amazon.png";
-import filpkart from "../assets/filpkart.png";
-import glowroad from "../assets/glowroad.jpg";
-import jiomart from "../assets/jiomart.png";
-import meesho from "../assets/meesho2.png";
-import walmart from "../assets/walmart.png";
+// import amazon from "../assets/amazon.png";
+// import filpkart from "../assets/filpkart.png";
+// import glowroad from "../assets/glowroad.jpg";
+// import jiomart from "../assets/jiomart.png";
+// import meesho from "../assets/meesho2.png";
+// import walmart from "../assets/walmart.png";
 import "./IconSections.css";
 
 const IconSections = ({ speed =5 }) => {
   const marqueeRef = useRef(null);
   const [marqueeWidth, setMarqueeWidth] = useState(0);
 
-  const icons = [amazon, filpkart, meesho, glowroad, jiomart, walmart];
+  // const icons = [amazon, filpkart, meesho, glowroad, jiomart, walmart];
 
   useEffect(() => {
     if (marqueeRef.current) {

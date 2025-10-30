@@ -13,11 +13,13 @@ const Specialization = () => {
     desc: "Our Digital Marketing Services help businesses grow online through targeted strategies. We specialize in SEO, social media marketing, PPC, content creation, and email campaigns, driving traffic, increasing brand visibility, and boosting conversions to ensure sustainable success.",
     path: "/services/digital-marketing",
   },
+    
   {
-    title: "Free Support",
-    desc: "We understand the challenges e-commerce sellers face, offering free support to help you get started and succeed on platforms like Amazon, Flipkart, and more. Whether new or optimizing, our team ensures a smooth, hassle-free seller account setup and guidance throughout.",
-    path: "/services/free-support",
+    title: "Product Photography",
+    desc: "At The Star Solution, we offer professional product photography that makes your brand stand out. Our high-quality, clear, and attractive product images help boost sales and build customer trust across platforms like Amazon, Flipkart, and more.",
+    path: "/services/product-photography",
   },
+
   {
     title: "Web Development",
     desc: "Our Web Development Services provide custom, user-friendly websites designed to meet your business needs. From responsive design to seamless functionality, we ensure your site is optimized for performance, offering an engaging online experience that drives growth and success.",
