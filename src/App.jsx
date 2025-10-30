@@ -16,7 +16,8 @@ import Contact from './pages/Contact'
 import BLog from './pages/BLog'
 import ProductPhotography from './pages/services/ProductPhotography'
 
-function App() {
+
+  function App() {
   return (
     <div>
       <ScrollTop/>
