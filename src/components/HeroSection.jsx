@@ -1,58 +1,83 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import heroimg1 from "../assets/heroimg1.webp"
-import heroimg2 from "../assets/heroimg2.png"
-import heroimg3 from "../assets/heroimg3.png"
-import heroimg4 from "../assets/heroimg4.png"
 import { Link } from "react-router-dom";
+
+import Amazon from "../assets/image/heroSectionImg/Amazon.webp";
+import Ebay from "../assets/image/heroSectionImg/Ebay.webp";
+import Etsy from "../assets/image/heroSectionImg/Etsy.webp";
+import Walmart from "../assets/image/heroSectionImg/Walmart.webp";
+import meesho from "../assets/image/heroSectionImg/Meesho.jpg";
+import jiomart from "../assets/image/heroSectionImg/jiomart.jpg";
+import flipkart  from "../assets/image/heroSectionImg/flipkart.webp";
 
 const HeroSection = () => {
   const services = [
-  { name: "Ecommerce", path: "/services/ecommerce" },
-  { name: "Digital Marketing", path:"/services/digital-marketing " },
-  { name: "Web Development", path: "/services/web-development" },
-  { name: "App Development", path: "/services/app-development" },
-  { name: "BPO Service", path: "/services/bpo" },
-];
-
+    { id: 1, name: "Ecommerce", path: "/services/ecommerce" },
+    { id: 2, name: "Digital Marketing", path: "/services/digital-marketing" },
+    { id: 3, name: "Web Development", path: "/services/web-development" },
+    { id: 4, name: "App Development", path: "/services/app-development" },
+    { id: 5, name: "BPO Service", path: "/services/bpo" },
+  ];
 
   return (
     <div className="bg-[hsl(216,53%,22%)]">
       <div className="relative md:pb-20 flex flex-col items-center w-full max-w-[1340px] mx-auto px-4 md:px-8 bg-[#1A3255]">
         <div className="lg:block hidden">
           {/* absolute left dives */}
-          <div className="hidden md:block absolute md:top-[90px] lg:top-16 left-16 w-[120px] h-[100px]">
+
+          {/* card 1 */}
+          <div className="absolute lg:top-12 left-45 ">
             <img
-              className="rounded-full h-28 w-28"
-              src={heroimg1}
-              alt="web development"
+              className="w-[120px] h-[60px] object-contain rounded-full"
+              src={Amazon}
+              alt="amazon"
             />
           </div>
 
-          <div className="hidden md:block absolute md:top-[390px] lg:top-96 left-20 w-[120px] h-[100px]">
+          {/* card 2 */}
+
+          <div className="absolute  lg:top-56 left-8 ">
             <img
-              className="rounded-full h-28 w-28"
-              src={heroimg3}
-              alt="Walmart"
+              className="w-[120px] h-[60px] object-contain rounded-full"
+              src={Walmart}
+              alt="flipkart"
             />
           </div>
 
-          {/* absolute right dives */}
-          <div className="hidden md:block absolute md:top-[50px] lg:top-[40px] right-32 w-[150px] h-[100px]">
+          {/* card 3 */}
+
+          <div className="absolute lg:top-[310px] left-12">
+            <img className="w-96 h-96" src={meesho} alt="meesho" />
+          </div>
+
+      {/* card 4 */}
+
+      <div className="absolute lg:top-[-120px] right-48">
+      
+    <img
+    className="w-96 h-96 object-contain rounded-full"
+    src={flipkart}
+    alt="flipkart"
+  />
+    
+      </div>
+
+          {/* card 5 */}
+
+          <div className="absolute lg:top-15 right-0">
+            <img className="w-96 h-96" src={jiomart} alt="jiomart" />
+          </div>
+
+          {/* card 6 */}
+
+          <div className="absolute  lg:top-[480px] right-44">
             <img
-              className="h-32"
-              src={heroimg2}
-              alt="meta add"
+              className="w-[120px] h-[60px] object-contain rounded-full"
+              src={Ebay}
+              alt="ebay"
             />
           </div>
 
-          <div className="hidden md:block absolute md:top-[450px] lg:top-96 right-28 w-[150px] h-[100px]">
-            <img
-              className="w-full"
-              src={heroimg4}
-              alt="eBay"
-            />
-          </div>
         </div>
 
         {/* Main Content */}
@@ -88,31 +113,26 @@ const HeroSection = () => {
           </div>
         </div>
 
+        {/* service cards */}
 
-
-{/* service cards */}
-
-   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-between mt-14 lg:mt-20 mb-8 lg:mb-0 px-4 md:px-0">
-  {services.map((service, index) => (
-    <Link
-      key={index}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-14 lg:mt-20 mb-8 lg:mb-0 px-4 md:px-0 relative">
+  {services.map((service) => (
+    <Link 
+      key={service.id} 
       to={service.path}
       className="flex justify-center items-center 
-                 px-5 py-2 rounded-full shadow-md border border-white text-white  
-                 font-semibold transition-all duration-300 
-                 hover:bg-yellow-600 hover:text-white hover:border-none hover:scale-105 
-                 whitespace-nowrap overflow-hidden text-ellipsis text-center
-                 text-sm sm:text-base"
+        px-5 py-2 rounded-full border border-white text-white  
+        font-semibold transition-all duration-300 
+        hover:bg-yellow-600 hover:text-white hover:border-transparent hover:scale-105 
+        whitespace-nowrap overflow-hidden text-ellipsis text-center
+        text-sm sm:text-base cursor-pointer relative z-10"
     >
       {service.name}
     </Link>
   ))}
 </div>
 
-
-
-
-      </div>
+    </div>
     </div>
   );
 };

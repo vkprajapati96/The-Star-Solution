@@ -70,14 +70,38 @@ const Footer = () => {
         {/* Right: What We Do */}
         <div>
           <h4 className="text-white font-semibold mb-4">What We Do</h4>
-          <ul className="text-gray-400 text-sm flex flex-col gap-2">
-            <li>E-Commerce Business</li>
-            <li>E-Commerce Account Management</li>
-            <li>Free Support for E-Commerce Businesses</li>
-            <li>Web Development Services</li>
-            <li>App Development</li>
-            <li>BPO-Service</li>
-          </ul>
+<ul className="text-gray-400 text-sm flex flex-col gap-2">
+  <Link to="/services/ecommerce">
+    <li className="hover:text-white cursor-pointer transition">
+      E-Commerce
+    </li>
+  </Link>
+  <Link to="/services/digital-marketing">
+    <li className="hover:text-white cursor-pointer transition">
+      Digital Marketing
+    </li>
+  </Link>
+  <Link to="/services/product-photography">
+    <li className="hover:text-white cursor-pointer transition">
+      Product Photography
+    </li>
+  </Link>
+  <Link to="/services/web-development">
+    <li className="hover:text-white cursor-pointer transition">
+      Web Development
+    </li>
+  </Link>
+  <Link to="/services/app-development">
+    <li className="hover:text-white cursor-pointer transition">
+      App Development
+    </li>
+  </Link>
+  <Link to="/services/bpo">
+    <li className="hover:text-white cursor-pointer transition">
+      BPO-Service
+    </li>
+  </Link>
+</ul>
         </div>
       </div>
 

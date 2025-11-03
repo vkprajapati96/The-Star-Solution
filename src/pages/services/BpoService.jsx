@@ -43,31 +43,32 @@ const BpoService = () => {
     <>
 
           <section className="bg-[hsl(216,53%,22%)]  py-16 px-6">
-      <div className="max-w-[1340px] mx-auto flex flex-col md:flex-row items-center gap-10">
-        
-        {/* Left Side (Text Content) */}
-        <div className="flex-1 text-center md:text-left">
-          <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 mb-4 leading-snug">
-            Scalable BPO Solutions <br /> 
-            to Meet Your Business Needs
-          </h2>
-          <p className="text-white text-base leading-relaxed">
-            At The Star Solution, we specialize in providing professional Business Process
-            Outsourcing (BPO) services to help businesses operate efficiently and achieve
-            their goals. By outsourcing your non-core tasks to our experienced team, you can
-            focus on scaling your business while we handle the rest.
-          </p>
-        </div>
+<div className="w-full max-w-[1340px] mx-auto flex flex-col lg:flex-row items-center gap-10 px-4">
+  {/* Left Side (Text Content) */}
+  <div className="w-full  text-center  lg:text-left">
+    <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-yellow-500 mb-4 leading-snug">
+      Scalable BPO Solutions <br />
+      to Meet Your Business Needs
+    </h2>
+    <p className="text-white text-base leading-relaxed">
+      At The Star Solution, we specialize in providing professional Business Process
+      Outsourcing (BPO) services to help businesses operate efficiently and achieve
+      their goals. By outsourcing your non-core tasks to our experienced team, you can
+      focus on scaling your business while we handle the rest.
+    </p>
+  </div>
 
-        {/* Right Side (Image) */}
-        <div className="flex-1 flex justify-center">
-          <img
-            src={bpo}
-            alt="BPO Solutions"
-            className="w-full max-w-sm md:max-w-md rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      </div>
+  {/* Right Side (Image) */}
+  <div className="w-full mt-6 md:mt-0">
+    <img
+      src={bpo}
+      alt="BPO Solutions"
+      className="w-full h-auto rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
+    />
+  </div>
+</div>
+
+
     </section>
 
 

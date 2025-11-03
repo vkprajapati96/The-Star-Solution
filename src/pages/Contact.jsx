@@ -74,6 +74,7 @@ const Contact = () => {
               type="number"
               name="phone"
               id="phone"
+              min="0"
               value={message.phone}
               onChange={handleChange}
               className="p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-900"
@@ -153,7 +154,7 @@ const Contact = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
+     </div>
     </section>
   );
 };

@@ -42,32 +42,34 @@ const features = [
   return (
     <>
       <section className="bg-[hsl(216,53%,22%)] py-16 px-6">
-        <div className="max-w-[1340px] mx-auto flex flex-col md:flex-row items-center gap-10">
-          {/* Left Side (Text Content) */}
-          <div className="flex-1 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 mb-4 leading-snug">
-              Transform Your Business <br />
-              with Expert App <br />
-              Development Solutions
-            </h2>
-            <p className="text-white text-base leading-relaxed">
-              Our App Development Services turn your business vision into custom,
-              high-performance mobile apps. In today’s digital world, having an app is
-              essential for staying competitive, engaging customers, and driving growth.
-              We create tailored apps with seamless functionality, intuitive design, and
-              exceptional user experiences that set your brand apart.
-            </p>
-          </div>
+    <div className="max-w-[1340px] mx-auto flex flex-col lg:flex-row items-center gap-10 px-4">
+  {/* Left Side (Text Content) */}
+  <div className="flex-1 text-center lg:text-left space-y-5">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-500 leading-snug mx-auto lg:mx-0 max-w-[700px]">
+      Transform Your Business <br className="hidden sm:block" />
+      with Expert App <br className="hidden md:block" />
+      Development Solutions
+    </h2>
 
-          {/* Right Side (Image) */}
-          <div className="flex-1 flex justify-center">
-            <img
-              src={appDev}
-              alt="App Development"
-              className="w-full max-w-sm md:max-w-md rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-        </div>
+    <p className="text-white text-sm sm:text-base leading-relaxed mx-auto lg:mx-0 max-w-[650px]">
+      Our App Development Services turn your business vision into custom,
+      high-performance mobile apps. In today’s digital world, having an app is
+      essential for staying competitive, engaging customers, and driving growth.
+      We create tailored apps with seamless functionality, intuitive design, and
+      exceptional user experiences that set your brand apart.
+    </p>
+  </div>
+
+  {/* Right Side (Image) */}
+  <div className="flex-1 flex justify-center w-full">
+    <img
+      src={appDev}
+      alt="App Development"
+      className="w-full sm:w-[90%] md:w-[85%] lg:w-[80%] rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
+    />
+  </div>
+</div>
+
       </section>
 
 

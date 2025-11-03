@@ -1,76 +1,86 @@
 import React, { useEffect, useRef } from "react";
 
 const SnakeCursor = () => {
-  const snakeLength = 10; 
-  const trail = useRef([]);
+  const canvasRef = useRef(null);
   const mouse = useRef({ x: 0, y: 0 });
-  const dots = useRef([]);
-  const requestRef = useRef(null);
-
-  const speed = 0.09    ;
+  const trail = useRef([]);
 
   useEffect(() => {
-    // document.body.style.cursor = "none"; 
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
 
+    // Full screen setup
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-    for (let i = 0; i < snakeLength; i++) {
-      const dot = document.createElement("div");
-      dot.style.position = "fixed";
-      dot.style.top = "0";
-      dot.style.left = "0";
-      dot.style.width = "10px";
-      dot.style.height = "10px";
-      dot.style.borderRadius = "50%";
-      dot.style.background = `hsl(${200 + i * 10}, 100%, 60%)`;
-      dot.style.pointerEvents = "none";
-      dot.style.zIndex = "9999";
-      dot.style.filter = "blur(1px)";
-      document.body.appendChild(dot);
-      dots.current.push(dot);
-      trail.current.push({ x: 0, y: 0 });
-    }
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    window.addEventListener("resize", handleResize);
 
     const handleMouseMove = (e) => {
       mouse.current.x = e.clientX;
       mouse.current.y = e.clientY;
     };
-
     window.addEventListener("mousemove", handleMouseMove);
 
+    // 🔹 Trail points (kam rakhe taaki line chhoti aur tight ho)
+    for (let i = 0; i < 4; i++) {
+  trail.current.push({
+    x: window.innerWidth / 2,
+    y: window.innerHeight / 2,
+  });
+}
+
+
     const animate = () => {
-      //  Lead dot follows cursor with adjustable speed
-      trail.current[0].x += (mouse.current.x - trail.current[0].x) * speed;
-      trail.current[0].y += (mouse.current.y - trail.current[0].y) * speed;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      for (let i = 1; i < snakeLength; i++) {
+      // 🔹 1️⃣ Mouse se pehla point move hota hai (slow follow)
+      const head = trail.current[0];
+      head.x += (mouse.current.x - head.x) * 0.15;
+      head.y += (mouse.current.y - head.y) * 0.15;
+
+      // 🔹 2️⃣ Baaki points apne pehle wale ko follow karte hain (tight)
+      for (let i = 1; i < trail.current.length; i++) {
         const prev = trail.current[i - 1];
-        const curr = trail.current[i];
-        curr.x += (prev.x - curr.x) * 0.3;
-        curr.y += (prev.y - curr.y) * 0.3;
+        const point = trail.current[i];
+        point.x += (prev.x - point.x) * 0.25;
+        point.y += (prev.y - point.y) * 0.25;
       }
 
-      // Draw all dots
-      for (let i = 0; i < snakeLength; i++) {
-        const dot = dots.current[i];
-        const pos = trail.current[i];
-        dot.style.transform = `translate(${pos.x - 5}px, ${pos.y - 5}px)`;
-      
+      // 🔹 Line draw karo
+      ctx.beginPath();
+      ctx.moveTo(trail.current[0].x, trail.current[0].y);
+      for (let i = 1; i < trail.current.length; i++) {
+        const point = trail.current[i];
+        ctx.lineTo(point.x, point.y);
       }
 
-      requestRef.current = requestAnimationFrame(animate);
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "rgba(234, 179, 8, 0.8)"; // soft yellow-500
+      ctx.lineWidth = 4; // line moti/smooth
+      ctx.lineCap = "round";
+      ctx.stroke();
+
+      requestAnimationFrame(animate);
     };
 
     animate();
 
     return () => {
-      cancelAnimationFrame(requestRef.current);
       window.removeEventListener("mousemove", handleMouseMove);
-      dots.current.forEach((dot) => document.body.removeChild(dot));
+      window.removeEventListener("resize", handleResize);
     };
-    
   }, []);
 
-  return null;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-[9999]"
+    />
+  );
 };
 
 export default SnakeCursor;

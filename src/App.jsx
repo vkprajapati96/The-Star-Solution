@@ -15,6 +15,9 @@ import ScrollTop from './components/ScrollBar'
 import Contact from './pages/Contact'
 import BLog from './pages/BLog'
 import ProductPhotography from './pages/services/ProductPhotography'
+import SubNavbar from './components/layout/SubNavbar '
+import Whatsapp from './components/Whatsapp'
+import Career from './pages/Career'
 
 
   function App() {
@@ -22,8 +25,10 @@ import ProductPhotography from './pages/services/ProductPhotography'
     <div>
       <ScrollTop/>
       <SnakeCursor />
-
+      {/* <SubNavbar/> */}
       <Navbar/>
+      <Whatsapp/>
+
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
@@ -40,6 +45,7 @@ import ProductPhotography from './pages/services/ProductPhotography'
 
         <Route path='/contact' element={<Contact/>} />
         <Route path='/blog' element={<BLog/>} />
+        <Route path='/career' element={<Career/>} />
 
       </Routes>
       <Footer/>

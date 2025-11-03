@@ -42,34 +42,34 @@ const WebDevelopment = () => {
   return (
     <>   
     <section className="bg-[hsl(216,53%,22%)] py-16 px-6">
-      <div className="max-w-[1340px] mx-auto flex flex-col lg:flex-row items-center gap-12">
-        
-        {/* Left Side - Text */}
-        <div className="flex-1 text-center lg:text-left space-y-5">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-600 leading-snug">
-            Boost Your Business <br className="hidden sm:block" />
-            with Tailored Website <br className="hidden md:block" />
-            Development Services
-          </h2>
+    <div className="max-w-[1340px] mx-auto flex flex-col lg:flex-row items-center gap-12">
+  {/* Left Side - Text */}
+  <div className="flex-1 text-center lg:text-left space-y-5 px-4">
+    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-600 leading-snug mx-auto lg:mx-0 max-w-[700px]">
+      Boost Your Business <br className="hidden sm:block" />
+      with Tailored Website <br className="hidden md:block" />
+      Development Services
+    </h2>
 
-          <p className="text-white text-sm sm:text-base leading-relaxed max-w-[600px] mx-auto lg:mx-0">
-            We understand the challenges e-commerce sellers face on platforms like
-            Amazon and Flipkart. To support you, we offer free guidance at every
-            step, whether you're starting out or optimizing your store. Our expert
-            team provides the advice and assistance you need to succeed in the
-            competitive e-commerce world.
-          </p>
-        </div>
+    <p className="text-white text-sm sm:text-base leading-relaxed mx-auto lg:mx-0 max-w-[650px]">
+      We understand the challenges e-commerce sellers face on platforms like
+      Amazon and Flipkart. To support you, we offer free guidance at every
+      step, whether you're starting out or optimizing your store. Our expert
+      team provides the advice and assistance you need to succeed in the
+      competitive e-commerce world.
+    </p>
+  </div>
 
-        {/* Right Side - Image */}
-        <div className="flex-1 flex justify-center">
-          <img
-            src={webDev}
-            alt="Website Development"
-            className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[85%] rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
-          />
-        </div>
-      </div>
+  {/* Right Side - Image */}
+  <div className="flex-1 flex justify-center w-full">
+    <img
+      src={webDev}
+      alt="Website Development"
+      className="w-full sm:w-[90%] md:w-[80%] lg:w-[85%] rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
+    />
+  </div>
+</div>
+
     </section>
         
     <div className="bg-white py-16 px-6">

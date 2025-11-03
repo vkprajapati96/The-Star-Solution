@@ -7,8 +7,8 @@ const Services = () => {
 
   const brands = [
     "Amazon",
-    "Meesho",
     "Flipkart",
+    "Meesho",
     "JioMart",
     "Amazon Global",
   ];
