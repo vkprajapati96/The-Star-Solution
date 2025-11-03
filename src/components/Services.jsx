@@ -42,7 +42,6 @@ const Services = () => {
       <div className="w-full max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-10">
         <h1 className="text-center font-bold text-3xl sm:text-4xl md:text-5xl text-yellow-600">
            Specialization
-
         </h1>
 
         {/* Brand buttons */}
@@ -54,7 +53,7 @@ const Services = () => {
               className={`border border-slate-500 rounded-full px-4 sm:px-6 md:px-8 py-2 cursor-pointer transition-all duration-300 text-sm sm:text-base
                 ${
                   selectedBrand === item
-                    ? "bg-yellow-600 text-black scale-105"
+                    ? "bg-yellow-600 text-white scale-105"
                     : "text-white hover:bg-yellow-600 hover:text-black"
                 }
               `}

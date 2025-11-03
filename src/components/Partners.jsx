@@ -5,7 +5,6 @@ import myntra from "../assets/partnerImg/Myntra-Logo.png";
 import meesho from "../assets/partnerImg/meesho.png";
 import swiggy from "../assets/partnerImg/swiggy.png";
 import byjus from "../assets/partnerImg/Byju's.png";
-// import glowroad from "../assets/partnerImg/glowRoad.webp";
 import cars24 from "../assets/partnerImg/cars24.png";
 import hcl from "../assets/partnerImg/HCL.png";
 import jioMart2 from "../assets/partnerImg/JioMart-.jpg";
@@ -20,7 +19,6 @@ import ola from "../assets/partnerImg/ola.png";
 import walmart from "../assets/partnerImg/walmart.png";
 
 const PartnersSection = () => {
-  // All logos in a single array for uniform structure
   const partners = [
     amazon,
     flipkart,
@@ -31,7 +29,6 @@ const PartnersSection = () => {
     swiggy,
     byjus,
     walmart,
-    // glowroad,
     cars24,
     hcl,
     tcs,
@@ -40,7 +37,7 @@ const PartnersSection = () => {
     shiprocket,
     smartbiz,
     ebay,
-    ola
+    ola,
   ];
 
   return (
@@ -67,25 +64,16 @@ const PartnersSection = () => {
             <div
               key={index}
               className="
-                bg-white 
-                flex 
-                justify-center 
-                items-center 
-                p-4 
-                rounded-xl 
-                shadow-md 
-                hover:shadow-lg 
-                hover:scale-105 
-                transition-all 
-                duration-300 
-                w-full 
-                h-[100px]
+                bg-white flex justify-center items-center 
+                rounded-xl shadow-md hover:shadow-lg hover:scale-105 
+                transition-all duration-300 
+                w-full h-[110px] sm:h-[130px] md:h-[150px]
               "
             >
               <img
                 src={logo}
                 alt={`Partner ${index + 1}`}
-                className="max-h-[60px] w-auto object-contain"
+                className="w-[100px] sm:w-[130px] md:w-[150px] h-auto object-contain"
               />
             </div>
           ))}

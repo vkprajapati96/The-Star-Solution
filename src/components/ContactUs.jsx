@@ -142,18 +142,7 @@ const ContactUs = () => {
         </div>
       </div>
 
-      {/* Google Map */}
-      <div className="mt-16 flex justify-center">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.461593844692!2d77.3148355754991!3d28.5859260756902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5a83e8c2b7d%3A0x9d9bed3612f70196!2sThe%20Star%20Solution!5e0!3m2!1sen!2sin!4v1727351556903!5m2!1sen!2sin"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+     
     </section>
   );
 };

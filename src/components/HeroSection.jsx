@@ -4,18 +4,21 @@ import heroimg1 from "../assets/heroimg1.webp"
 import heroimg2 from "../assets/heroimg2.png"
 import heroimg3 from "../assets/heroimg3.png"
 import heroimg4 from "../assets/heroimg4.png"
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const services = [
-    "Ecommerce",
-    "Digital Marketing",
-    "Web/App Development",
-    "BPO Service",
-  ];
+  { name: "Ecommerce", path: "/services/ecommerce" },
+  { name: "Digital Marketing", path:"/services/digital-marketing " },
+  { name: "Web Development", path: "/services/web-development" },
+  { name: "App Development", path: "/services/app-development" },
+  { name: "BPO Service", path: "/services/bpo" },
+];
+
 
   return (
     <div className="bg-[hsl(216,53%,22%)]">
-      <div className="relative min-h-screen md:pb-20 flex flex-col items-center w-full max-w-[1340px] mx-auto px-4 md:px-8 bg-[#1A3255]">
+      <div className="relative md:pb-20 flex flex-col items-center w-full max-w-[1340px] mx-auto px-4 md:px-8 bg-[#1A3255]">
         <div className="lg:block hidden">
           {/* absolute left dives */}
           <div className="hidden md:block absolute md:top-[90px] lg:top-16 left-16 w-[120px] h-[100px]">
@@ -85,36 +88,24 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* <div className='hidden md:flex justify-center'>
-          <div className="flex flex-wrap justify-center items-center gap-8 mt-12 md:mt-20">
-        
-            <img
-              src="https://spectrumbpo.com/wp-content/uploads/2025/10/LG-03.webp?w=100&h=40"
-              alt="Logo1"
-            />
-            <img
-              src="https://spectrumbpo.com/wp-content/uploads/2025/10/LG-04.webp?w=100&h=40"
-              alt="Logo2"
-            />
-            <img
-              src="https://spectrumbpo.com/wp-content/uploads/2025/10/LG-01.webp?w=100&h=40"
-              alt="Logo3"
-            />
-            <img
-              src="https://spectrumbpo.com/wp-content/uploads/2025/10/LG-02.webp?w=100&h=40"
-              alt="Logo5"
-            />
-          </div>
-        </div> */}
 
-    <div className="grid grid-cols-2 md:grid-cols-4  gap-3  justify-between mt-14 mb-8 lg:mb-[0px] ">
+
+{/* service cards */}
+
+   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 justify-between mt-14 lg:mt-20 mb-8 lg:mb-0 px-4 md:px-0">
   {services.map((service, index) => (
-    <div
+    <Link
       key={index}
-      className="flex justify-center items-center rounded-full shadow-md text-xl font-semibold text-center px-4 py-2 border border-white text-white  "
+      to={service.path}
+      className="flex justify-center items-center 
+                 px-5 py-2 rounded-full shadow-md border border-white text-white  
+                 font-semibold transition-all duration-300 
+                 hover:bg-yellow-600 hover:text-white hover:border-none hover:scale-105 
+                 whitespace-nowrap overflow-hidden text-ellipsis text-center
+                 text-sm sm:text-base"
     >
-      {service}
-    </div>
+      {service.name}
+    </Link>
   ))}
 </div>
 
