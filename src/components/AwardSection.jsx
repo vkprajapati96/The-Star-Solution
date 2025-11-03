@@ -23,6 +23,7 @@ const AwardSection = () => {
             entrepreneur or an established brand, we are your one-stop solution
             for your business growth.
           </p>
+          
         </div>
 
         {/* Right Side - Full-width Video */}
