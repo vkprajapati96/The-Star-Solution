@@ -1,5 +1,5 @@
 import React from "react";
-// import video from "../assets/awardVideo.mp4";
+import video from "../assets/Award2.mp4";
 
 const AwardSection = () => {
   return (
@@ -35,7 +35,7 @@ const AwardSection = () => {
             playsInline
             className="w-full h-[210px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-xl shadow-lg object-cover"
           >
-            <source src="" type="video/mp4" />
+            <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
