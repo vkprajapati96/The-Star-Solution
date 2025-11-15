@@ -1,11 +1,11 @@
 import React from "react";
-import video from "../assets/Award2.mp4";
+// import video from "../assets/Award2.mp4";
 
 const AwardSection = () => {
   return (
     <section className="bg-white py-16 px-6">
       {/* Parent container with proper width control */}
-      <div className="max-w-[1340px] w-full mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-10">
+      <div className="max-w-[1340px] w-full mx-auto flex flex-col lg:flex-row items-center lg:items-stretch gap-10">
         
         {/* Left Side - Text Content */}
         <div className="flex-1 text-center md:text-left flex flex-col justify-center">
@@ -27,18 +27,23 @@ const AwardSection = () => {
         </div>
 
         {/* Right Side - Full-width Video */}
-        <div className="flex-1 w-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-[210px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-xl shadow-lg object-cover"
-          >
-            <source src={video} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
+    <div className="flex-1 w-full">
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-[210px] sm:h-[250px] md:h-[300px] lg:h-[350px] rounded-xl shadow-lg object-cover"
+  >
+    <source
+      src="https://res.cloudinary.com/dq0nsixu6/video/upload/v1763184366/Award2_tp9vwp.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
       </div>
     </section>
   );
