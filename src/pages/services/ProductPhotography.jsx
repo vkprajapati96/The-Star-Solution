@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import product from "../../assets/image/productImg/product.png"
+import product from "../../assets/image/productImg/Product.png"
 import product1 from "../../assets/image/productImg/product1.png"
 import product2 from "../../assets/image/productImg/product2.png"
 import product3 from "../../assets/image/productImg/product3.png"
