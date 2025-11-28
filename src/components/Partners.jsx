@@ -18,7 +18,7 @@ import ebay from "../assets/partnerImg/ebay.png";
 import ola from "../assets/partnerImg/ola.png";
 import walmart from "../assets/partnerImg/walmart.png";
 
-const PartnersSection = () => {
+const Partnersdiv = () => {
   const partners = [
     amazon,
     flipkart,
@@ -41,10 +41,10 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section className="bg-gray-900 py-14">
+    <div className="bg-gray-900 py-14">
       <div className="max-w-[1340px] mx-auto px-6">
         {/* Heading */}
-        <h2 className="text-center text-yellow-600 text-3xl font-bold mb-12">
+        <h2 className="text-center text-yellow-400 text-3xl font-bold mb-12">
           OUR PARTNERS
         </h2>
 
@@ -79,8 +79,8 @@ const PartnersSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default PartnersSection;
+export default Partnersdiv;

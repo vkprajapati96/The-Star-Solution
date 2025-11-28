@@ -41,20 +41,20 @@ const Certificates = () => {
     <div className="bg-[#f0f0f0]">
       <div className="max-w-[1340px] mx-auto w-full py-16 px-4 relative">
         {/* Heading */}
-        <h2 className="text-center text-yellow-600 text-3xl sm:text-4xl font-bold mb-8">
+        <h2 className="text-center text-yellow-400 text-3xl sm:text-4xl font-bold mb-8">
           CERTIFICATES & ACHIEVEMENTS
         </h2>
 
         {/* Scroll Buttons */}
         <button
           onClick={() => scroll("left")}
-          className="z-50 absolute cursor-pointer left-2 top-1/2 -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition sm:block"
+          className="z-10 absolute cursor-pointer left-2 top-1/2 -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition sm:block"
         >
           <ChevronLeft size={24} />
         </button>
         <button
           onClick={() => scroll("right")}
-          className="z-50 absolute cursor-pointer right-2 top-1/2 -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition sm:block"
+          className="z-10 absolute cursor-pointer right-2 top-1/2 -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition sm:block"
         >
           <ChevronRight size={24} />
         </button>

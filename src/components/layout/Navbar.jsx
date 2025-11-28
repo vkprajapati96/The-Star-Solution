@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { X, ChevronDown, Menu, PhoneCall, HousePlus } from "lucide-react";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       // Check if screen is desktop (xl breakpoint = 1280px)
-      if (window.innerWidth >= 1280) {
+      if (window.innerWidth >= 1280){
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
           setShowServices(false);
         }
@@ -44,7 +44,7 @@ const Navbar = () => {
         <ul className="hidden lg:flex items-center gap-12 font-semibold text-black relative">
           <Link to="/" onClick={() => setShowServices(false)}>
             <li className="text-lg font-semibold flex items-center gap-1 cursor-pointer hover:text-yellow-500 transition">
-              <HousePlus className="w-6 h-6" />Home
+              <HousePlus className="w-5 h-5" />Home
             </li>
           </Link>
 

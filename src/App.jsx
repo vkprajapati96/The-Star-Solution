@@ -5,17 +5,14 @@ import Footer from './components/layout/Footer'
 import Home from './pages/Home'
 import About from './pages/About'
 import DigitalMarketing from './pages/services/DigitalMarketing'
-// import FreeSupport from './pages/services/FreeSupport'
 import WebDevelopment from './pages/services/WebDevelopment'
 import AppDevelopment from './pages/services/AppDevelopment'
 import BpoService from './pages/services/BpoService'
 import Ecommerce from './pages/services/Ecommerce'
-import SnakeCursor from './components/SnakeDotCursor'
 import ScrollTop from './components/ScrollBar'
 import Contact from './pages/Contact'
 import BLog from './pages/BLog'
 import ProductPhotography from './pages/services/ProductPhotography'
-import SubNavbar from './components/layout/SubNavbar '
 import Whatsapp from './components/Whatsapp'
 import Career from './pages/Career'
 
@@ -24,25 +21,21 @@ import Career from './pages/Career'
   return (
     <div>
       <ScrollTop/>
-      <SnakeCursor />
-      {/* <SubNavbar/> */}
       <Navbar/>
       <Whatsapp/>
-
+      
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
 
-          {/* Services Pages  */}
-
+          {/* Services Pages  */} 
         <Route path='/services/ecommerce' element={<Ecommerce/>} />
         <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
         <Route path="/services/product-photography" element={<ProductPhotography/>} />
         <Route path="/services/web-development" element={<WebDevelopment />} />
         <Route path="/services/app-development" element={<AppDevelopment />} />
         <Route path="/services/bpo" element={<BpoService />} />
-
-
+        
         <Route path='/contact' element={<Contact/>} />
         <Route path='/blog' element={<BLog/>} />
         <Route path='/career' element={<Career/>} />

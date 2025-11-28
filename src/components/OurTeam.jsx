@@ -61,11 +61,11 @@ const OurTeam = () => {
   ];
 
   return (
-    <section className="bg-[#f0f0f0] py-16 px-6">
+    <div className="bg-[#f0f0f0] py-16 px-6">
       <div className="w-full max-w-[1340px] mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-yellow-600">
+          <h2 className="text-3xl sm:text-4xl font-bold text-yellow-400">
             OUR TEAM
           </h2>
         </div>
@@ -75,7 +75,7 @@ const OurTeam = () => {
           {/* Left Scroll Button */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition z-10"
+            className="z-10 absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition "
           >
             <ChevronLeft size={24} />
           </button>
@@ -102,13 +102,13 @@ const OurTeam = () => {
           {/* Right Scroll Button */}
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition z-10"
+            className="z-10 absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-white p-2 rounded-full shadow-md hover:bg-yellow-600 transition "
           >
             <ChevronRight size={24} />
           </button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
+import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import career from "../assets/career.webp";
+import career from "../assets/career.png";
+
 
 const Career = () => {
   const [formData, setFormData] = useState({
@@ -12,7 +13,9 @@ const Career = () => {
     gender: "",
     role: "",
     message: "",
-  });
+  
+  });  
+
 
   const handleChange = (e) => {
     setFormData({
@@ -20,7 +23,7 @@ const Career = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -29,12 +32,12 @@ const Career = () => {
       return;
     }
 
-    emailjs
+  emailjs
       .send(
-        "your_service_id",   
-        "your_template_id",  
+        "service_6u1aplo",   
+        "template_x4wu6tr",  
         formData,              
-        "your_public_key"    
+        "1TUZMA8l72m4Ip6T8"    
       )
       .then(
         (result) => {
@@ -60,21 +63,23 @@ const Career = () => {
     <section className="bg-[#f0f0f0] py-16">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8">
         {/* Left Side: Image */}
-        <div className="">
-          <img
-            src={career}
-            alt="We Are Hiring"
-            className="object-contain rounded-xl shadow-md"
-          />
-        </div>
+<div className="w-full lg:w-1/2 flex justify-center">
+  <div className="border-2 border-gray-400 rounded-xl p-4 h-full flex items-center justify-center">
+    <img
+      src={career}
+      alt="We Are Hiring"
+      className="h-[450px] md:h-[550px] lg:h-[600px] w-auto object-cover rounded-lg shadow-lg"
+    />
+  </div>
+</div>
 
         {/* Right Side: Form */}
-        <div className="w-full md:w-1/2 shadow-2xl rounded-2xl p-6 flex flex-col justify-center">
+        <div className="w-full md:w-1/2 shadow-2xl rounded-2xl px-6 py-10 flex flex-col justify-center">
           <h2 className="text-2xl font-bold text-center mb-6">
             Want To Join Us?
           </h2>
 
-          <form onSubmit={sendEmail} className="flex flex-col gap-4">
+          <form onSubmit={sendEmail} className="flex flex-col gap-4 py-4">
             {/* Name */}
             <input
               type="text"
@@ -165,7 +170,7 @@ const Career = () => {
             {/* Submit */}
             <button
               type="submit"
-              className="bg-yellow-500 cursor-pointer mx-auto w-52 text-white px-4 py-2 rounded-md font-semibold hover:bg-yellow-700 transition-all duration-300"
+              className="bg-yellow-400 cursor-pointer mx-auto w-52 text-white px-4 py-2 rounded-md font-semibold hover:bg-yellow-700 transition-all duration-300"
             >
               Send Message
             </button>

@@ -16,8 +16,8 @@ function Home() {
   return (
     <div>
         <HeroSection/>
-        <Specialization/>
         <Services/>
+        <Specialization/>
         <Certificates/>
         <AwardSection/>
         <PartnersSection/>

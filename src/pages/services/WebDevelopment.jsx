@@ -1,104 +1,125 @@
 import React from 'react'
 import ContactUs from '../../components/ContactUs';
 
-import webDev from "../../assets/web-dev.jpg";
+// import webDev from "../../assets/web-dev.jpg";
+import web from "../../assets/image/webdevimg/web.png";
+
 
 const WebDevelopment = () => {
 
   const features = [
-    {
-      title: "Custom Website Design",
-      description:
-        "We believe that every business is unique, which is why we offer fully customized designs that reflect your brand identity and business values. Our expert designers work closely with you to understand your requirements and create a visually appealing website that connects with your target audience. Whether you're looking for a modern, minimalist look or a more dynamic, interactive design, we ensure your website captures attention and leaves a lasting impression.",
-    },
-    {
-      title: "Responsive and Mobile-Friendly Design",
-      description:
-        "With more users accessing websites from mobile devices, having a responsive design is crucial. Our web development services ensure that your website looks and functions perfectly on all devices, from desktops to smartphones and tablets. A mobile-friendly design not only improves the user experience but also boosts your search engine rankings, as search engines like Google prioritize mobile-optimized sites.",
-    },
-    {
-      title: "Seamless Functionality",
-      description:
-        "A great website isn’t just about how it looks—it’s about how it works. We ensure your site is built with seamless functionality to make navigation intuitive and user-friendly. From fast load times to smooth transitions between pages, our team uses the latest technologies and best practices to ensure your website runs efficiently. This includes integrating features like contact forms, live chat, product catalogs, shopping carts, and more, depending on your business needs.",
-    },
-    {
-      title: "Optimized for Performance",
-      description:
-        "Website speed and performance are key to providing a positive user experience and improving your conversion rates. We optimize every aspect of your website’s performance, ensuring fast loading times and smooth interaction. By minimizing page load times and optimizing code, images, and scripts, we ensure your visitors stay engaged and aren’t frustrated by delays.",
-    },
-    {
-      title: "Search Engine Optimization (SEO)",
-      description:
-        "A beautifully designed website is only effective if people can find it. That’s why we incorporate SEO best practices during the web development process. From optimizing page titles, meta descriptions, and headers to ensuring clean, SEO-friendly code, we help your website rank higher in search engine results, increasing visibility and driving organic traffic to your site.",
-    },
-    {
-      title: "Engaging User Experience (UX)",
-      description:
-        "We design websites with your audience in mind, ensuring an intuitive and engaging user experience. Clear calls-to-action, easy navigation, and interactive elements enhance the user journey, guiding visitors toward taking the desired actions, whether it's making a purchase, signing up for a newsletter, or reaching out for more information.",
-    },
-  ];
-
+  {
+    title: "Custom Website Design",
+    description:
+      "Build High-Performance Websites That Convert & Grow Your Business. Professional, Responsive, And SEO-Optimized Website Development Designed To Increase Engagement, Boost Credibility, And Generate Real Business Results Across Every Device.",
+  },
+  {
+    title: "Responsive And Mobile-Friendly Design",
+    description:
+      "Crafting Modern, Powerful & Conversion-Focused Websites. We Combine Creativity, Technology, And Strategic UX Design To Develop Fast, Secure, And Scalable Websites That Elevate Your Brand And Maximize Customer Conversion.",
+  },
+  {
+    title: "Seamless Functionality",
+    description:
+      "Your Trusted Partner For Tailored Website Development Solutions. From Custom UI/UX Design To Seamless Functionality And Smart SEO Architecture — We Create Websites That Drive Growth, Build Trust, And Stand Out In The Competitive Digital World.",
+  },
+  {
+    title: "Optimized For Performance",
+    description:
+      "Transform Your Online Presence With Result-Driven Web Development. We Deliver Beautifully Designed And Mobile-Friendly Websites Engineered For Speed, Search Rankings, And A Smooth Customer Experience That Turns Visitors Into Loyal Customers.",
+  },
+  {
+    title: "Search Engine Optimization (SEO)",
+    description:
+      "Where Creative Design Meets Powerful Technology. We Develop Custom Business Websites With Optimized Performance, Intuitive Navigation, Responsive Layouts, And Conversion-Centric Features That Help Brands Scale Online.",
+  },
+  {
+    title: "Engaging User Experience (UX)",
+    description:
+      "Build Smarter, Faster & More Engaging Digital Experiences. From eCommerce Websites To Corporate Portals, We Create User-Centric, Secure, And SEO-Enhanced Platforms That Support Long-Term Success And Measurable Growth.",
+  },
+];
 
   return (
     <>   
-    <section className="bg-[hsl(216,53%,22%)] py-16 px-6">
-    <div className="max-w-[1340px] mx-auto flex flex-col lg:flex-row items-center gap-12">
-  {/* Left Side - Text */}
-  <div className="flex-1 text-center lg:text-left space-y-5 px-4">
-    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-600 leading-snug mx-auto lg:mx-0 max-w-[700px]">
-      Boost Your Business <br className="hidden sm:block" />
-      with Tailored Website <br className="hidden md:block" />
-      Development Services
-    </h2>
+<div className="py-16 bg-[#1A3255] text-white">
+  <div className="w-full max-w-[1340px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
 
-    <p className="text-white text-sm sm:text-base leading-relaxed mx-auto lg:mx-0 max-w-[650px]">
-      We understand the challenges e-commerce sellers face on platforms like
-      Amazon and Flipkart. To support you, we offer free guidance at every
-      step, whether you're starting out or optimizing your store. Our expert
-      team provides the advice and assistance you need to succeed in the
-      competitive e-commerce world.
-    </p>
-  </div>
+    {/* Left: Heading + Description */}
+    <div className="w-full lg:w-1/2 flex flex-col justify-center gap-6 text-center lg:text-left">
 
-  {/* Right Side - Image */}
-  <div className="flex-1 flex justify-center w-full">
-    <img
-      src={webDev}
-      alt="Website Development"
-      className="w-full sm:w-[90%] md:w-[80%] lg:w-[85%] rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
-    />
+      {/* Heading (unchanged) */}
+      <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+        <span className="text-yellow-400">
+          Unlock Top-Tier Website Development
+        </span>
+        <br />
+        <span className="text-yellow-400">
+          to Grow Your Digital Presence
+        </span>
+      </h2>
+
+      {/* Paragraph with first letter capitalized and line-height */}
+      <p className="text-lg md:text-base leading-relaxed opacity-90  ">
+        Build High-Performance Websites That Convert & Scale Your Business.
+        Your Website Is The Face Of Your Brand And We Make Sure It Leaves A Lasting Impression.
+        We Design And Develop Fast-Loading, SEO-Optimized, Mobile-Responsive, And Visually Stunning
+        Websites That Help Businesses Attract Customers And Increase Sales. Whether You're Launching
+        A New Site Or Upgrading An Existing One, Our Expert Developers Combine Modern UI/UX Design,
+        Advanced Technology, And Smart Strategy To Deliver A Seamless Digital Experience.
+      </p>
+
+    </div>
+
+    {/* Right: Image */}
+    <div className="w-full lg:w-1/2 flex items-center justify-center">
+      <img
+        src={web}   // <-- apna image yaha laga dena
+        alt="Website Development"
+        className="w-full lg:max-w-[520px] rounded-2xl shadow-2xl object-cover"
+      />
+    </div>
+
   </div>
 </div>
 
-    </section>
-        
-    <div className="bg-white py-16 px-6">
-      <div className="max-w-[1340px] mx-auto text-center">
-        {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-yellow-600 mb-10">
-Key Features of Our Web Development Services:
+       
+   <div className="bg-white py-16 px-6">
+  <div className="max-w-[1340px] mx-auto text-center">
 
+    {/* div Heading */}
+    <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">
+      Key Features of Our Web Development Services
+    </h2>
 
-        </h2>
+    {/* Clean Description */}
+    <p className="text-[14px] md:text-lg  text-gray-700 max-w-3xl mx-auto mb-10 leading-relaxed">
+        We Develop Visually Appealing, Fast, And User-Friendly Websites Tailored To Your Business Needs.
+  Our Expert Team Blends Creative Design, Cutting-Edge Technology, And Strategic SEO Practices
+  To Ensure Your Website Not Only Looks Great But Also Performs Exceptionally — Helping You Attract,
+  Engage, And Convert More Customers Online.
+ </p>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-[#1A3255] text-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 text-left"
-            >
-              <h3 className="text-xl font-semibold text-yellow-600 mb-3">
-                {feature.title}
-              </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+    {/* Cards Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          className="bg-[#1A3255] text-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform duration-300 text-left"
+        >
+          <h3 className="text-xl font-semibold text-yellow-400 mb-3">
+            {feature.title}
+          </h3>
+
+          <p className="text-gray-300 text-sm leading-relaxed">
+            {feature.description}
+          </p>
         </div>
-      </div>
+      ))}
     </div>
+
+  </div>
+</div>
 
     <ContactUs/>
 

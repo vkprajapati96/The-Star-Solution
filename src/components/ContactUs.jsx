@@ -46,10 +46,10 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="contact" className="bg-gray-100 text-gray-900 pt-12 pb-16 px-4 sm:px-6 lg:px-8">
+    <div id="contact" className="bg-gray-100 text-gray-900 pt-12 pb-16 px-4 sm:px-6 lg:px-8">
       {/* Title */}
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl  font-extrabold tracking-wide text-yellow-600">
+        <h2 className="text-3xl sm:text-4xl  font-extrabold tracking-wide text-yellow-400">
           CONTACT US
         </h2>
       </div>
@@ -74,6 +74,7 @@ const ContactUs = () => {
               type="number"
               name="phone"
               id="phone"
+              min="0"
               value={message.phone}
               onChange={handleChange}
               className="p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-900"
@@ -90,6 +91,7 @@ const ContactUs = () => {
               className="p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-500 text-gray-900"
               placeholder="Email"
               required
+            
             />
 
             <textarea
@@ -105,7 +107,7 @@ const ContactUs = () => {
 
             <button
               type="submit"
-              className="bg-yellow-500 w-[120px] mx-auto text-gray-900 font-semibold py-2 rounded-md hover:bg-yellow-600 transition-colors mt-2"
+              className="cursor-pointer bg-yellow-400 w-[120px] mx-auto text-gray-900 font-semibold py-2 rounded-md hover:bg-yellow-600 transition-colors mt-2"
             >
               Submit
             </button>
@@ -129,21 +131,19 @@ const ContactUs = () => {
           <div className="flex items-center gap-3">
             <IoCall size={24} className="text-yellow-500" />
             <span className="text-lg sm:text-xl text-black font-semibold">
-              0120 4120438 , +91 9670242590
+              0120 4120438 , +91 9670242590 , +91 8368067567
             </span>
           </div>
 
           <p className="text-gray-700 text-sm sm:text-base mt-4">
-            At The Star Solution, we are committed to providing exceptional e-commerce seller account management services on platforms like Amazon, Flipkart, and more. Whether you have questions about our services, need support with your seller account, or are looking to collaborate, our dedicated team is here to assist you.
-          </p>
-          <p className="text-gray-700 text-sm sm:text-base mt-2">
-            Feel free to reach out to us via email, phone, or the contact form beside. We strive to respond promptly and ensure that your needs are met with the highest level of professionalism and care.
-          </p>
+            
+          Have Questions Or Need Support? Reach Out To Us We’re Here To Help.  
+ </p>
         </div>
       </div>
 
      
-    </section>
+    </div>
   );
 };
 

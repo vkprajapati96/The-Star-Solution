@@ -5,37 +5,38 @@ const Testimonials = () => {
   const scrollRef = useRef(null);
 
   const testimonials = [
-    {
-      name: "Devraj",
-      text: "Working with The Star Solution has been a fantastic experience. They know the ins and outs of Amazon and Flipkart, and their strategies have boosted our visibility and sales. A reliable partner for any e-commerce seller!",
-      rating: 4,
-    },
-    {
-      name: "Amyra",
-      text: "Thanks to The Star Solution, managing our online store has become so much easier. They handle everything with expertise, allowing us to focus on growing our business. Highly recommended for anyone in e-commerce!",
-      rating: 5,
-    },
-    {
-      name: "Rahul",
-      text: "We were struggling to manage our listings on Amazon, but The Star Solution stepped in and made the process smooth and effective. Our rankings have improved, and our account health is better than ever. Exceptional service!",
-      rating: 4,
-    },
-    {
-      name: "Dkhand",
-      text: "The Star Solution offers a comprehensive range of services for e-commerce sellers. They cover everything from account setup to ongoing management, making it a one-stop shop!",
-      rating: 3,
-    },
-    {
-      name: "Suman",
-      text: "The Star Solution has made managing my e-commerce accounts a breeze. From optimizing listings to handling all the little details, they take care of everything. I’ve been able to focus on expanding my business without worrying about the day-to-day tasks. Highly recommended!",
-      rating: 5,
-    },
-     {
-      name: "Jeetu Kumar",
-      text: "Since day one, The Star Solution has been a game-changer for my business. The services they provide have made managing my seller account so much easier. My sales have increased, my reviews have gotten better, and my listings are performing at their best. I couldn’t be more satisfied!",
-      rating: 4,
-    },
-  ];
+  {
+    name: "Devraj",
+    text: "Working With The Star Solution Has Been A Fantastic Experience. They Know The Ins And Outs Of Amazon And Flipkart, And Their Strategies Have Boosted Our Visibility And Sales. A Reliable Partner For Any E-Commerce Seller!",
+    rating: 4,
+  },
+  {
+    name: "Amyra",
+    text: "Thanks To The Star Solution, Managing Our Online Store Has Become So Much Easier. They Handle Everything With Expertise, Allowing Us To Focus On Growing Our Business. Highly Recommended For Anyone In E-Commerce!",
+    rating: 5,
+  },
+  {
+    name: "Rahul",
+    text: "We Were Struggling To Manage Our Listings On Amazon, But The Star Solution Stepped In And Made The Process Smooth And Effective. Our Rankings Have Improved, And Our Account Health Is Better Than Ever. Exceptional Service!",
+    rating: 4,
+  },
+  {
+    name: "Dkhand",
+    text: "The Star Solution Offers A Comprehensive Range Of Services For E-Commerce Sellers. They Cover Everything From Account Setup To Ongoing Management, Making It A One-Stop Shop!",
+    rating: 3,
+  },
+  {
+    name: "Suman",
+    text: "The Star Solution Has Made Managing My E-Commerce Accounts A Breeze. From Optimizing Listings To Handling All The Little Details, They Take Care Of Everything. I’ve Been Able To Focus On Expanding My Business Without Worrying About The Day-To-Day Tasks. Highly Recommended!",
+    rating: 5,
+  },
+  {
+    name: "Jeetu Kumar",
+    text: "Since Day One, The Star Solution Has Been A Game-Changer For My Business. The Services They Provide Have Made Managing My Seller Account So Much Easier. My Sales Have Increased, My Reviews Have Gotten Better, And My Listings Are Performing At Their Best. I Couldn’t Be More Satisfied!",
+    rating: 4,
+  },
+];
+
 
   const scroll = (direction) => {
     const scrollAmount = 300;
@@ -47,10 +48,10 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 relative">
+    <div className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-[1340px] mx-auto text-center">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-500 mb-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-yellow-400 mb-10">
           Testimonials
         </h2>
 
@@ -116,7 +117,7 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
