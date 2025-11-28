@@ -1,9 +1,5 @@
 import React from "react";
-// import productImg1 from "../../assets/productImg1.png";
-// import productImg2 from "../../assets/productImg2.jpg";
-// import productImg3 from "../../assets/productImg3.jpg";
-// import productImg4 from "../../assets/productNike.jpg";
-// import productPhone from "../../assets/productPhone.png";
+
 
 import product from "../../assets/image/productImg/product.png"
 import product1 from "../../assets/image/productImg/product1.png"
@@ -14,7 +10,6 @@ import ContactUs from "../../components/ContactUs";
 
 const ProductPhotography = () => {
 
-//   const images = [productImg1, productImg2, productImg3, productImg4];
 
 
   const serviceImages = [
