@@ -34,10 +34,10 @@ const Career = () => {
 
   emailjs
       .send(
-        "service_6u1aplo",   
-        "template_x4wu6tr",  
+        "service_ndohgkd",   
+        "template_vecwkha",  
         formData,              
-        "1TUZMA8l72m4Ip6T8"    
+        "O5omNHbUp1SeQGtys"    
       )
       .then(
         (result) => {
